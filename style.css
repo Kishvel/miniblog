@@ -27,6 +27,7 @@ article {
     padding: 1.5rem;
     margin-bottom: 1.5rem;
     border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
 /* Títulos de artículos */
@@ -35,19 +36,34 @@ article h2 {
 }
 
 /* Footer dentro del artículo */
-article footer {
-    margin-top: 1rem;
-}
-
-/* Enlace Leer más */
-article a {
+/* Enlace Leer más (CTA) */
+.read-more {
+    display: inline-block;
     text-decoration: none;
-    color: #0077cc;
+    background-color: #0077cc;
+    color: white;
     font-weight: bold;
+    padding: 0.5rem 0.9rem;
+    border-radius: 6px;
 }
 
-article a:hover {
+.read-more:hover {
+    background-color: #005fa3;
+}
+
+.read-more:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
+}
+
+/* Enlaces dentro del texto del artículo */
+article p a {
+    color: #0077cc;
     text-decoration: underline;
+}
+
+article p a:hover {
+    text-decoration: none;
 }
 
 /* Footer global */
@@ -57,4 +73,18 @@ body > footer {
     background-color: #222;
     color: white;
     margin-top: 2rem;
+}
+
+body > footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+body > footer a:hover {
+    text-decoration: none;
+}
+
+body > footer a:focus-visible {
+    outline: 3px solid #ffbf47;
+    outline-offset: 3px;
 }
